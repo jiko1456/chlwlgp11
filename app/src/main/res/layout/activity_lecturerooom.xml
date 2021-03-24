@@ -5,7 +5,7 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="83dp"
+        android:layout_height="66dp"
         android:layout_margin="30dp"
         android:gravity="bottom"
         android:src="@drawable/b_navi" />
@@ -134,32 +134,31 @@
     </GridLayout>
 
     //밑에 부분 전체
-
     <View
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_weight="1"/>
 
-    // 밑에 버튼 5개 감싸는 레이아웃
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-
-        android:gravity="bottom"
+        android:gravity="center"
         android:orientation="horizontal"
-        android:layout_marginBottom="45dp">
+        android:layout_marginBottom="25dp">
 
         <LinearLayout
-            android:layout_width="163dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="center">
 
             <LinearLayout
-                android:layout_width="80dp"
+                android:layout_width="70dp"
                 android:layout_height="112dp"
                 android:layout_gravity="bottom|center_horizontal"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_marginLeft="5dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -170,8 +169,8 @@
 
                 <ImageButton
                     android:id="@+id/res"
-                    android:layout_width="66dp"
-                    android:layout_height="90dp"
+                    android:layout_width="63dp"
+                    android:layout_height="75dp"
                     android:layout_gravity="bottom|center"
                     android:background="#00ff0000"
                     android:cropToPadding="true"
@@ -180,10 +179,11 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="80dp"
+                android:layout_width="70dp"
                 android:layout_height="112dp"
                 android:layout_gravity="bottom|center_horizontal"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_marginLeft="5dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -194,24 +194,18 @@
 
                 <ImageButton
                     android:id="@+id/bus"
-                    android:layout_width="66dp"
-                    android:layout_height="90dp"
+                    android:layout_width="63dp"
+                    android:layout_height="75dp"
                     android:layout_gravity="bottom|center"
                     android:background="#00ff0000"
                     android:scaleType="fitCenter"
                     android:src="@drawable/b_busstop" />
 
-                <LinearLayout
-                    android:layout_width="80dp"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="66dp"
+            android:layout_width="wrap_content"
             android:layout_height="158dp"
             android:layout_gravity="bottom|center_horizontal"
             android:orientation="vertical">
@@ -225,8 +219,8 @@
 
             <ImageButton
                 android:id="@+id/lec"
-                android:layout_width="66dp"
-                android:layout_height="90dp"
+                android:layout_width="63dp"
+                android:layout_height="75dp"
                 android:layout_gravity="bottom|center"
                 android:background="#00ff0000"
                 android:scaleType="fitCenter"
@@ -234,12 +228,13 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="center">
 
             <LinearLayout
-                android:layout_width="80dp"
+                android:layout_width="70dp"
                 android:layout_height="112dp"
                 android:layout_gravity="bottom|center_horizontal"
                 android:orientation="vertical">
@@ -248,13 +243,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="기   타"
+                    android:text="기    타"
                     android:textStyle="bold" />
 
                 <ImageButton
                     android:id="@+id/etc"
-                    android:layout_width="66dp"
-                    android:layout_height="90dp"
+                    android:layout_width="63dp"
+                    android:layout_height="75dp"
                     android:layout_gravity="bottom|center"
                     android:background="#00ff0000"
                     android:scaleType="fitCenter"
@@ -262,10 +257,12 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="80dp"
+                android:layout_width="70dp"
                 android:layout_height="112dp"
                 android:layout_gravity="bottom|center_horizontal"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -276,8 +273,8 @@
 
                 <ImageButton
                     android:id="@+id/favor"
-                    android:layout_width="67dp"
-                    android:layout_height="90dp"
+                    android:layout_width="63dp"
+                    android:layout_height="75dp"
                     android:layout_gravity="bottom|center"
                     android:background="#00ff0000"
                     android:scaleType="fitCenter"
