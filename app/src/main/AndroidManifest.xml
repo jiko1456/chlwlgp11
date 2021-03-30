@@ -6,13 +6,29 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+            android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         >
         <meta-data android:name="android.max_aspect" android:value="2.1" />
 
 
+        <activity android:name=".RoomInfo_10"/>
+        <activity android:name=".RoomInfo_9" />
+        <activity android:name=".RoomInfo_8" />
+        <activity android:name=".RoomInfo_7" />
+        <activity android:name=".RoomInfo_6" />
+        <activity android:name=".RoomInfo_5" />
+        <activity android:name=".RoomInfo_4" />
+        <activity android:name=".RoomInfo_3" />
+        <activity android:name=".RoomInfo_2" />
+
+        <activity android:name=".Like" />
+        <activity android:name=".Navigation" />
+        <activity android:name=".Room" />
+        <activity android:name=".Res" />
+        <activity android:name=".Etc" />
+        <activity android:name=".Bus" />
         <activity android:name=".LectureRoom">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,8 +36,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".subLectureRoom"></activity>
-        <activity android:name=".Res"></activity>
+
+        <activity android:name=".RoomInfo_1" />
     </application>
 
 </manifest>

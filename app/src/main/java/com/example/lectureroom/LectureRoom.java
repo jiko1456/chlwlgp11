@@ -52,23 +52,23 @@ public class LectureRoom extends AppCompatActivity {
         win.addContentView(linear, paramlinear);
 
         //강의동 버튼 intent
-            Button button01= findViewById(R.id.button01);
-            button01.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent(getApplicationContext(), subLectureRoom.class);
-                    intent.putExtra("key", 1);
-                    startActivity(intent);
-
-                }
-            });
-            Button button02 = findViewById(R.id.button02);
-            button02.setOnClickListener(new View.OnClickListener() {
+        Button button01= findViewById(R.id.button01);
+        button01.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), subLectureRoom.class);
-                intent.putExtra("key", 2);
+                Intent intent = new Intent(getApplicationContext(), RoomInfo_1.class);
                 startActivity(intent);
+                finish();
+
+            }
+        });
+        Button button02 = findViewById(R.id.button02);
+        button02.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), RoomInfo_2.class);
+                startActivity(intent);
+                finish();
 
             }
         });
@@ -76,9 +76,9 @@ public class LectureRoom extends AppCompatActivity {
         button03.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), subLectureRoom.class);
-                intent.putExtra("key", 3);
+                Intent intent = new Intent(getApplicationContext(), RoomInfo_3.class);
                 startActivity(intent);
+                finish();
 
             }
         });
@@ -86,9 +86,9 @@ public class LectureRoom extends AppCompatActivity {
         button04.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), subLectureRoom.class);
-                intent.putExtra("key", 4);
+                Intent intent = new Intent(getApplicationContext(), RoomInfo_4.class);
                 startActivity(intent);
+                finish();
 
             }
         });
@@ -96,9 +96,9 @@ public class LectureRoom extends AppCompatActivity {
         button05.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), subLectureRoom.class);
-                intent.putExtra("key", 5);
+                Intent intent = new Intent(getApplicationContext(), RoomInfo_5.class);
                 startActivity(intent);
+                finish();
 
             }
         });
@@ -106,9 +106,9 @@ public class LectureRoom extends AppCompatActivity {
         button06.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), subLectureRoom.class);
-                intent.putExtra("key", 6);
+                Intent intent = new Intent(getApplicationContext(), RoomInfo_6.class);
                 startActivity(intent);
+                finish();
 
             }
         });
@@ -116,19 +116,18 @@ public class LectureRoom extends AppCompatActivity {
         button07.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), subLectureRoom.class);
-                intent.putExtra("key", 7);
+                Intent intent = new Intent(getApplicationContext(), RoomInfo_7.class);
                 startActivity(intent);
-
+                finish();
             }
         });
         Button button08 = findViewById(R.id.button08);
         button08.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), subLectureRoom.class);
-                intent.putExtra("key", 8);
+                Intent intent = new Intent(getApplicationContext(), RoomInfo_8.class);
                 startActivity(intent);
+                finish();
 
             }
         });
@@ -136,19 +135,18 @@ public class LectureRoom extends AppCompatActivity {
         button09.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), subLectureRoom.class);
-                intent.putExtra("key", 9);
+                Intent intent = new Intent(getApplicationContext(), RoomInfo_9.class);
                 startActivity(intent);
-
+                finish();
             }
         });
         Button button10 = findViewById(R.id.button10);
         button10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), subLectureRoom.class);
-                intent.putExtra("key", 10);
+                Intent intent = new Intent(getApplicationContext(), RoomInfo_10.class);
                 startActivity(intent);
+                finish();
 
             }
         });
@@ -158,7 +156,45 @@ public class LectureRoom extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Res.class);
                 startActivity(intent);
+                finish();
 
+            }
+        });
+        ImageButton bus = findViewById(R.id.bus);
+        bus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Bus.class);
+                startActivity(intent);
+                finish();
+
+            }
+        });
+        ImageButton lec = findViewById(R.id.lec);
+        lec.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Room.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        ImageButton etc = findViewById(R.id.etc);
+        etc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Etc.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        ImageButton favor = findViewById(R.id.favor);
+        favor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Like.class);
+                startActivity(intent);
+                finish();
             }
         });
 

@@ -14,7 +14,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="식당 관련 정보"/>
+            android:text="기타 관련 정보"/>
 
     </LinearLayout>
 
