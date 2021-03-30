@@ -2,6 +2,7 @@ package com.example.lectureroom;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -9,15 +10,21 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.BaseAdapter;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 public class RoomInfo_10 extends AppCompatActivity {
 
     TextView cancelBtn, naviBtn;
     ImageButton res, bus, lec, etc, favor;
+    ListView roomInfo_content;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +56,15 @@ public class RoomInfo_10 extends AppCompatActivity {
         lec = (ImageButton) findViewById(R.id.lec);
         etc = (ImageButton) findViewById(R.id.etc);
         favor = (ImageButton) findViewById(R.id.favor);
+
+        roomInfo_content=(ListView)findViewById(R.id.roominfo_content);
+        RoomInfoAdapter adapter= new RoomInfoAdapter();
+        adapter.addItem(new RoomInfoItem("B1F", R.drawable.toilet, R.drawable.transparent, R.drawable.transparent, R.drawable.transparent, R.drawable.transparent));
+        adapter.addItem(new RoomInfoItem("1F", R.drawable.toilet, R.drawable.cafe, R.drawable.printer, R.drawable.transparent, R.drawable.transparent));
+        adapter.addItem(new RoomInfoItem("2F", R.drawable.toilet, R.drawable.transparent, R.drawable.transparent, R.drawable.transparent, R.drawable.transparent));
+        adapter.addItem(new RoomInfoItem("3F", R.drawable.toilet, R.drawable.transparent, R.drawable.transparent, R.drawable.transparent, R.drawable.transparent));
+        adapter.addItem(new RoomInfoItem("4F", R.drawable.toilet, R.drawable.transparent, R.drawable.transparent, R.drawable.transparent, R.drawable.transparent));
+        roomInfo_content.setAdapter(adapter);
 
         // 취소, 길 안내 버튼.
         cancelBtn.setOnClickListener(new View.OnClickListener() {
@@ -112,5 +128,46 @@ public class RoomInfo_10 extends AppCompatActivity {
         super.onBackPressed();
         Intent intent = new Intent(getApplicationContext(), LectureRoom.class);
         startActivity(intent);
+    }
+    //리스트뷰 어댑터 구현.
+    class RoomInfoAdapter extends BaseAdapter {
+        ArrayList<RoomInfoItem> items = new ArrayList<RoomInfoItem>();
+
+        @Override
+        public int getCount() {
+            return items.size();
+        }
+
+        public void addItem(RoomInfoItem item) {
+            items.add(item);
+        }
+
+        @Override
+        public Object getItem(int position) {
+            return items.get(position);
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return position;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            RoomInfoItemView roomInfoItemView = null;
+            if (convertView == null) {
+                roomInfoItemView = new RoomInfoItemView(getApplicationContext());
+            } else {
+                roomInfoItemView = (RoomInfoItemView) convertView;
+            }
+            RoomInfoItem item = items.get(position);
+            roomInfoItemView.setFloor(item.getFloor());
+            roomInfoItemView.setFloorPic1(item.getFloorPic1());
+            roomInfoItemView.setFloorPic2(item.getFloorPic2());
+            roomInfoItemView.setFloorPic3(item.getFloorPic3());
+            roomInfoItemView.setFloorPic4(item.getFloorPic4());
+            roomInfoItemView.setFloorPic5(item.getFloorPic5());
+            return roomInfoItemView;
+        }
     }
 }
