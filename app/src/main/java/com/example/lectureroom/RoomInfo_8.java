@@ -61,7 +61,7 @@ public class RoomInfo_8 extends AppCompatActivity {
 
         // 리스트뷰 구현.
         roomInfo_content = (ListView) findViewById(R.id.roominfo_content);
-        RoomInfoAdapter adapter = new RoomInfoAdapter();
+        final RoomInfoAdapter adapter = new RoomInfoAdapter();
         adapter.addItem(new RoomInfoItem("B1F", R.drawable.toilet, R.drawable.transparent, R.drawable.transparent, R.drawable.transparent, R.drawable.transparent));
         adapter.addItem(new RoomInfoItem("1F", R.drawable.woman, R.drawable.printer, R.drawable.transparent, R.drawable.transparent, R.drawable.transparent));
         adapter.addItem(new RoomInfoItem("2F", R.drawable.man, R.drawable.transparent, R.drawable.transparent, R.drawable.transparent, R.drawable.transparent));
@@ -70,6 +70,18 @@ public class RoomInfo_8 extends AppCompatActivity {
         adapter.addItem(new RoomInfoItem("5F", R.drawable.woman, R.drawable.transparent, R.drawable.transparent, R.drawable.transparent, R.drawable.transparent));
         roomInfo_content.setAdapter(adapter);
 
+        // 리스트뷰 클릭.
+        roomInfo_content.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                // 각 리스트에 대한 층 수 값 저장.
+                String floor = ((RoomInfoItem)adapter.getItem(position)).getFloor();
+
+                Intent intent = new Intent(getApplicationContext(), RoomInfoPop_8.class);
+                intent.putExtra("floor", floor);
+                startActivity(intent);
+            }
+        });
 
 
 
